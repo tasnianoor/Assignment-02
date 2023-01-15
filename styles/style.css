@@ -453,6 +453,12 @@ footer {
     .experience-card h1 {
         font-size: 2.5rem;
     }
+     
+      
+    .data-box{ 
+        width: 350px; 
+        height: 200px;
+    }
     .data-box-container{
         flex-direction: column; 
         align-items: center;
@@ -521,6 +527,10 @@ footer {
 
     .data {
         margin-top: 8rem;
+    }
+    .data-box{ 
+        width: 350px; 
+        height: 200px;
     }
 
     .data-box-container {
