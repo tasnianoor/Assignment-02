@@ -282,12 +282,12 @@ nav ul li a {
     font-size: 20px;
     font-weight: 700;
  }
- .data-box img{
+ .cust{
     transition: all 1s ease-in-out;
     /* animation: data-box img 10s ease-in-out infinite; */
     /* transform: rotate(deg 30); */
 }
-.data-box img:hover{
+.cust:hover{
     cursor: pointer;
     transform: rotate(deg 30);
  }
