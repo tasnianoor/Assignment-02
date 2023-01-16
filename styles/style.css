@@ -11,7 +11,7 @@ Utilities styles
 
 body {
     font-family: 'Work Sans', sans-serif;
-    max-width: 1440px;
+    max-width: 1540px;
     margin: 0 auto;
 }
 
@@ -22,7 +22,7 @@ p {
 }
 
 /* All heading common color */
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h4,h5,h6 {
     color: #131313;
 }
 
@@ -131,6 +131,24 @@ nav ul li a {
     gap: 3rem;
     align-items: center;
 }
+.section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items:flex-start;
+    justify-content: center;
+    max-width: 542px;
+}
+
+.section-description{
+    padding-bottom: 20px;
+}
+
+.section-title {
+    font-size: 50px; 
+    font-weight: 700;
+    
+}
 
 .feature-image-container {
     display: grid;
@@ -142,20 +160,6 @@ nav ul li a {
     width: 100%;
 }
 
-.section-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items:flex-start;
-    justify-content: center;
-    max-width: 542px;
-}
-
-.section-title {
-    font-size: 50px; 
-    font-weight: 700;
-    
-}
 
 .gray {
     color: #727272;
@@ -163,6 +167,14 @@ nav ul li a {
 
 .orange {
       color: #FF900E;
+}
+.primary-btn1 {
+    text-decoration: none;
+    color: #fff;
+    background-color: #FF900E;
+    padding: 1rem 1.2rem; 
+    border-radius: 8px;
+    /* margin-top:1400px; */
 }
 
 
@@ -214,7 +226,7 @@ nav ul li a {
     left: 0;
     bottom: 0;
     background-color: #FF900E;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 8px;
     text-align: center;
 }
@@ -235,45 +247,70 @@ nav ul li a {
 /* ----------------------
     Data Section
 ----------------------- */
+
 .data .section-content {
     gap: 1.5rem;
     max-width: 542px;
 }
 .data-box-container{ 
-    width: 90%;
+    
     display: flex; 
     gap: 100px; 
+    align-items: center;
     justify-content: center; 
     margin-top: 100px;
+    /* margin-left: 100px; */
  }  
  .data-box{ 
+    height: 260px;
+    width: 230px;
     border: 1px solid #FF900E; 
     border-radius: 7px; 
     padding: 20px; 
     text-align: center; 
-    width: 20%; 
-    cursor: pointer;
+    
     transition: all 1s ease-in-out;
-    animation: data-box 10s ease-in-out infinite; 
-    animation: data-box 8s infinite linear;
+    animation: data-box 5s ease-in-out infinite; 
+    /* animation: data-box 8s infinite linear; */
  }  
+ .data-box h3{
+    font-size:34px ;
+    padding: 15px;
+ }
+ .data-box p{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+ }
+ .data-box img{
+    transition: all 1s ease-in-out;
+    /* animation: data-box img 10s ease-in-out infinite; */
+    /* transform: rotate(deg 30); */
+}
+.data-box img:hover{
+    cursor: pointer;
+    transform: rotate(deg 30);
+ }
+
  .data-box:hover{
+    cursor: pointer;
     transform:scale(1.2)
  }
 @keyframes data-box{ 
     0%   {
-        background-color:crimson; 
-        color: #fff;
+         background-color:crimson;  
+         color: #fff;
     }
     25%  {
           background-color:deeppink; 
           color:darkblue ;}
     50%  {
         background-color:fuchsia; 
-        color: #fff;
+        color:crimson;
     }
     100% {
         background-color:darkorchid;
+        color: deeppink;
     }
     
 }
@@ -306,7 +343,7 @@ nav ul li a {
 .card img{
     transition: all 1s ease-in-out;
   }
-  .card img:hover {
+.card img:hover {
     transform: scale(1.2);
     cursor: pointer;
   }
@@ -442,26 +479,35 @@ footer {
         height: 10rem;
     }
 
-    .feature-image-container {
-        grid-template-columns: 1fr;
+    .feature{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    }
+
+    .section-content {
+        grid-row: 1;
     }
 
     .feature-box-container {
         grid-template-columns: 1fr;
+    } 
+
+    .feature-image-container {
+        grid-template-columns: 1fr;
     }
+
+    
 
     .experience-card h1 {
         font-size: 2.5rem;
     }
      
       
-    .data-box{ 
-        width: 350px; 
-        height: 200px;
-    }
     .data-box-container{
         flex-direction: column; 
-        align-items: center;
+        align-items:center;
+    
+        
     }
     .sponsor-image-container{
         flex-direction: column; 
@@ -492,13 +538,13 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .section-content {
+     .section-content {
         grid-row: 1;
     }
 
     .feature-image-container {
         grid-template-columns: 1fr 1fr;
-    }
+    } 
 
     .feature-2 {
         grid-template-columns: 1fr;
